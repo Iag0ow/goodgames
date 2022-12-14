@@ -1,0 +1,89 @@
+.index {
+  z-index: 10;
+  color: #fff;
+}
+.lightNing {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.lightNing::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(#00ccff, #0ff);
+  animation: animate 4s linear infinite;
+}
+.lightNing::after {
+  border-radius: 45px;
+  content: "";
+  position: absolute;
+  background: #021a45;
+  inset: 6px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.noPointer {
+  cursor: default;
+}
+.start {
+  margin-top: 25px;
+  padding: 100px 0px;
+}
+
+.backGroundGameColor {
+  background-color: #010816;
+  color: white;
+  animation: anim-stars 10s linear infinite;
+}
+.show-more-less-clickable {
+  color: rgb(22, 143, 143);
+}
+
+.content-css {
+  text-align: center;
+}
+
+.listStyleNone {
+  list-style: none;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.scaled {
+  border-radius: 10px;
+  transition: 1s;
+  overflow: hidden;
+  animation-name: scale;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes laser {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-150px);
+  }
+}

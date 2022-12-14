@@ -1,0 +1,91 @@
+.h-100.p-5.text-white.bg-transparent h1 {
+  line-height: 2em;
+  border-bottom: 2px solid #fff;
+}
+
+.index {
+  z-index: 10;
+}
+.lightNing {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.lightNing::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 1500px;
+  background: linear-gradient(#00ccff, #0ff);
+  animation: animate 4s linear infinite;
+}
+.lightNing::after {
+  border-radius: 45px;
+  content: "";
+  position: absolute;
+  background: #021a45;
+  inset: 6px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.styledButton:hover {
+  background-color: rgba(0, 255, 255, 0.6);
+
+  color: #fff;
+}
+.styledButton a:hover {
+  color: #fff;
+}
+.styledButton {
+  text-transform: capitalize;
+}
+
+.backColor {
+  background-color: rgba(0, 255, 255, 0.6);
+  color: #fff;
+}
+
+.not-selectable {
+  -webkit-touch-callout: none; /* iPhone OS, Safari */
+  -webkit-user-select: none; /* Chrome, Safari 3 */
+  -khtml-user-select: none; /* Safari 2 */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none !important; /* Possível implementação no futuro */
+  /* cursor: default; */
+}
+.pageUp {
+  color: #093994;
+}
+
+.page-link {
+  background-color: #021a45;
+  color: #fff;
+}
+.page-link:hover,
+.page-link:focus {
+  background-color: #09327e;
+  color: #fff;
+}
+
+li.active a {
+  background-color: rgba(0, 255, 255, 0.507) !important;
+}
+.disabled > .page-link {
+  background-color: #021945ad !important;
+}
+
+/* --bs-pagination-focus-color: var(--bs-link-hover-color);
+--bs-pagination-focus-bg: #e9ecef;
+--bs-pagination-focus-box-shadow: 0 0 0 0.25remrgba(13, 110, 253, 0.25); */

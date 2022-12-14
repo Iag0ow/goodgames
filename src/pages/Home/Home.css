@@ -1,0 +1,52 @@
+.back {
+  background-color: #021a45;
+  color: #fff;
+}
+.front {
+  color: rgb(0, 0, 0);
+}
+
+.margin {
+  height: 780px;
+}
+
+.homeSpace {
+  margin-top: 100px;
+  padding: 100px 0px;
+}
+
+.cardHover {
+  background-color: #021a45 !important;
+  color: #0ff;
+  border: 2px solid #fff !important;
+  border-radius: 10px;
+  transition: 0.1s;
+  overflow: hidden;
+}
+.cardHover:hover {
+  box-shadow: 0 5px 50px 0 #0ff inset, 0 5px 50px 0 #0ff,
+    0 5px 50px 0 #0ff inset, 0 5px 50px 0 #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 5px #0ff;
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+.card-title.h5 {
+  color: white;
+  border: 1px solid white;
+  border-block-width: 1px;
+  line-height: 40px;
+  border-inline: 5px;
+}
+.tips {
+  border: 2px solid white;
+  padding: 0px 0px 15px 0px;
+}
+
+.cardHoved {
+  border-radius: 10px;
+  transition: 1s;
+  overflow: hidden;
+}
+.cardHoved:hover {
+  transform: scale(1.1);
+}
