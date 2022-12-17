@@ -1,41 +1,21 @@
 import React from "react";
-
+import gif from "../../imgs/buffer-404.gif";
+import "./NotFound.css";
 const NotFound = () => {
   return (
     <div>
-      <div class="row align-items-md-stretch">
-        <div class="col-md-6">
-          <div class="h-100 p-5 text-white bg-primary border rounded-3">
-            <h2>Change the background</h2>
-            <p>
-              Swap the background-color utility and add a `.text-*` color
-              utility to mix up the jumbotron look. Then, mix and match with
-              additional component themes and more.
-            </p>
-            <button class="btn btn-outline-primary" type="button">
-              Example button
-            </button>
+      <section className="container-fluid homeSpace">
+        <div className="d-flex justify-content-center flex-column align-items-center">
+          <h1 className="display-1 text-light">Error 404</h1>
+          <br />
+          <div className="block">
+            <img src={gif} className="d-block w-100" alt="" />
           </div>
+          <h1 className="display-4 text-light">
+            Oooops... You're not supposed to be here
+          </h1>
         </div>
-        <div class="col-md-6">
-          <div class="h-100 p-5 bg-primary border rounded-3">
-            <h2>Add borders</h2>
-            <p>
-              Or, keep it light and add a border for some added definition to
-              the boundaries of your content. Be sure to look under the hood at
-              the source HTML here as we've adjusted the alignment and sizing of
-              both column's content for equal-height.
-            </p>
-            <button
-              class="btn Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then,
-          mix and match with additional component themes and more."
-              type="button"
-            >
-              Example button
-            </button>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

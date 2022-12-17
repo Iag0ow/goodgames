@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import "./NavBar.css";
 const NavBar = () => {
   return (
-    <Navbar fixed="top" className="nav not-selectable" expand="md">
+    <Navbar fixed="top" className="nav not-selectable " expand="md">
       <Container fluid>
         <div className="brand">
           <NavLink className="brand" to={"/"}>
@@ -50,7 +50,17 @@ const NavBar = () => {
             </ul>
           </Nav>
 
-          <NavLink to={"/popular"}>More</NavLink>
+          <label className="d-flex">
+            <input
+              name="search"
+              type="text"
+              placeholder="Search..."
+              className="text-dark form-control me-2"
+            />
+            <button class="btn neon-button" type="submit">
+              Search
+            </button>
+          </label>
         </Navbar.Collapse>
       </Container>
     </Navbar>

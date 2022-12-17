@@ -8,7 +8,8 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
-const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
+const url =
+  "https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity";
 const Home = () => {
   const { data, loading } = useFetch(url);
   return (

@@ -31,9 +31,10 @@ const Game = () => {
                   </NavLink>
                 </li>
                 <li>
-                  {game &&
-                  game.hasOwnProperty("minimum_system_requirements") !==
-                    true ? (
+                  {(game &&
+                    game.hasOwnProperty("minimum_system_requirements") !==
+                      true) ||
+                  (game && game.minimum_system_requirements.os === null) ? (
                     <NavLink
                       className="neon-buttonDisabled noPointer"
                       disabled={true}
@@ -65,32 +66,36 @@ const Game = () => {
               </div>
             </div>
           </div>
-          <Carousel className="border m-5 ">
-            <Carousel.Item>
-              <img
-                className="d-block w-100 "
-                src={game && game.screenshots[0].image}
-                alt="First slide"
-              />
-              <Carousel.Caption></Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={game && game.screenshots[1].image}
-                alt="First slide"
-              />
-              <Carousel.Caption></Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={game && game.screenshots[2].image}
-                alt="First slide"
-              />
-              <Carousel.Caption></Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+          {game && game.hasOwnProperty("0") !== false ? (
+            <Carousel className="border m-5 ">
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 "
+                  src={game && game.screenshots[0].image}
+                  alt="First slide"
+                />
+                <Carousel.Caption></Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={game && game.screenshots[1].image}
+                  alt="First slide"
+                />
+                <Carousel.Caption></Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={game && game.screenshots[2].image}
+                  alt="First slide"
+                />
+                <Carousel.Caption></Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+          ) : (
+            ""
+          )}
         </Container>
       </div>
     </div>

@@ -36,6 +36,7 @@ const Games = () => {
       : currentItens;
   const pagesFiltered = Math.ceil(data && filtered.length / 16);
   const currentFiltered = data && filtered.slice(startIndex, endIndex);
+
   return (
     <div>
       <Container>
@@ -122,6 +123,35 @@ const Games = () => {
                 </div>
               </div>
             ))}
+          {data &&
+            search.length === 0 &&
+            currentItens.map((game, index) => (
+              <div key={index} className="col-lg-3 col-sm-6 mt-5 ">
+                <div className="align-self-center ">
+                  <NavLink to={`/game/${game.id}`}>
+                    <Card
+                      className="front cardHover"
+                      style={{ height: "362px" }}
+                    >
+                      <Card.Img
+                        className="zoom"
+                        variant="top"
+                        src={game.thumbnail}
+                      />
+                      <Card.Body className="lh-sm">
+                        <Card.Title>{game.title}</Card.Title>
+                        <Card.Text>{game.short_description}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </NavLink>
+                </div>
+              </div>
+            ))}
+          {data && search.length > 0 && currentFiltered.length === 0 && (
+            <h1 className="display-5 text-light d-flex justify-content-center">
+              Game not found
+            </h1>
+          )}
           <div className="d-flex t justify-content-center mt-4 flex-column">
             <button onClick={upPage} className="pageUp">
               <FontAwesomeIcon icon={faCircleChevronUp} className="fa-2xl" />
