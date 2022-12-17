@@ -50,7 +50,7 @@ const Games = () => {
                     name="search"
                     type="text"
                     placeholder="Search..."
-                    className="text-dark"
+                    className="text-dark form-control me-2"
                     onChange={handleSearch}
                     value={search}
                   />
