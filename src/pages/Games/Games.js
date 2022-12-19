@@ -1,6 +1,6 @@
 import { useFetch } from "../../hooks/useFetch";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Spinner from "react-bootstrap/Spinner";
@@ -9,6 +9,7 @@ import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 
 const Games = () => {
+  const { searchOtherPage } = useParams();
   const handlePageClick = (e) => {
     setCurrentPage(e.selected);
   };
@@ -21,6 +22,15 @@ const Games = () => {
   };
   const [currentPage, setCurrentPage] = useState(0);
   const [search, setSearch] = useState("");
+  useEffect(() => {
+    if (searchOtherPage === undefined) {
+      setSearch("");
+    } else {
+      setSearch(searchOtherPage);
+      document.getElementById("navSearch").value = "";
+    }
+  }, [searchOtherPage]);
+
   const url = `https://free-to-play-games-database.p.rapidapi.com/api/games`;
   const { data, loading } = useFetch(url);
   const pages = Math.ceil(data && data.length / 16);
@@ -36,7 +46,6 @@ const Games = () => {
       : currentItens;
   const pagesFiltered = Math.ceil(data && filtered.length / 16);
   const currentFiltered = data && filtered.slice(startIndex, endIndex);
-
   return (
     <div>
       <Container>

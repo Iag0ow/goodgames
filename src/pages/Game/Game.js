@@ -66,7 +66,8 @@ const Game = () => {
               </div>
             </div>
           </div>
-          {game && game.hasOwnProperty("0") !== false ? (
+          {console.log(game)}
+          {game && game.screenshots.hasOwnProperty("0") === true ? (
             <Carousel className="border m-5 ">
               <Carousel.Item>
                 <img

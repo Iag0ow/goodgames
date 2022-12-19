@@ -19,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/genres" element={<Genres />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/games/q=:searchOtherPage" element={<Games />} />
           <Route path="/game/:id" element={<Game />} />
           <Route path="/About" element={<About />} />
           <Route path="*" element={<NotFound />} />

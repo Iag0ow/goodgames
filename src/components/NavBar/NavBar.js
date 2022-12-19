@@ -2,8 +2,10 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useState } from "react";
 import "./NavBar.css";
 const NavBar = () => {
+  const [searchOtherPage, setSearchOtherPage] = useState("");
   return (
     <Navbar fixed="top" className="nav not-selectable " expand="md">
       <Container fluid>
@@ -49,17 +51,23 @@ const NavBar = () => {
               </li>
             </ul>
           </Nav>
-
           <label className="d-flex">
             <input
               name="search"
               type="text"
+              id="navSearch"
               placeholder="Search..."
               className="text-dark form-control me-2"
+              onChange={(e) => setSearchOtherPage(e.target.value)}
+              value={searchOtherPage}
             />
-            <button class="btn neon-button" type="submit">
+            <NavLink
+              to={`/games/q=${searchOtherPage}`}
+              className="btn neon-button"
+              type="submit"
+            >
               Search
-            </button>
+            </NavLink>
           </label>
         </Navbar.Collapse>
       </Container>
