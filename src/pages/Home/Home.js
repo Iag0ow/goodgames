@@ -59,7 +59,7 @@ const Home = () => {
         <div className="row ">
           <div className="col-md-12 d-flex p-0 border-top">
             <div className="align-self-center">
-              <h1 className="display-6 border-bottom lh-base">
+              <h1 className="display-6 border-bottom lh-base mb-3">
                 Find your favorite games in this site
               </h1>
               <hr />

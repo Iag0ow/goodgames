@@ -63,7 +63,7 @@ const NavBar = () => {
             />
             <NavLink
               to={`/games/q=${searchOtherPage}`}
-              className="btn neon-button"
+              className="neon-button"
               type="submit"
             >
               Search

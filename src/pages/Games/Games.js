@@ -7,7 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 import ReactPaginate from "react-paginate";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
-
+import "./Games.css";
 const Games = () => {
   const { searchOtherPage } = useParams();
   const handlePageClick = (e) => {
@@ -51,18 +51,19 @@ const Games = () => {
       <Container>
         <section className="homeSpace">
           <div className="row align-items-md-stretch">
-            <div className="col-md-12 lightNing ">
-              <div className="h-100 p-5  bg-transparent index not-selectable">
+            <div className="col-md-12 lightNingSearch">
+              <div className="h-100  p-5 bg-transparent index not-selectable">
                 <label>
-                  <h1 className="display-6 mb-2">Seach game:</h1>
                   <input
                     name="search"
                     type="text"
-                    placeholder="Search..."
-                    className="text-dark form-control me-2"
+                    placeholder="Search your game..."
+                    className="text-light teste"
                     onChange={handleSearch}
                     value={search}
                   />
+                  <span className="focus-border"></span>
+                  {/* form-control me-2 */}
                 </label>
               </div>
             </div>
