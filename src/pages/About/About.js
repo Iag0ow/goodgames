@@ -32,10 +32,7 @@ const About = () => {
           <div className="col-md-6 ">
             <Draggable>
               <div className="bg-light me-2 p-4 mt-5 cardAbout grabClick">
-                <h1>
-                  This is all about a personal project made by me Iago Macêdo,
-                  where my main objective was to test my own skills with React
-                </h1>
+                <h1>The project was based on the consumption of a games api</h1>
               </div>
             </Draggable>
 
