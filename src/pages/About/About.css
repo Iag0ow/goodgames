@@ -1,0 +1,10 @@
+.cardAbout {
+  width: 250px;
+  height: 150px;
+}
+.grabClick {
+  cursor: grab;
+}
+.grabClick:active {
+  cursor: grabbing;
+}

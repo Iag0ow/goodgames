@@ -63,7 +63,6 @@ const Games = () => {
                     value={search}
                   />
                   <span className="focus-border"></span>
-                  {/* form-control me-2 */}
                 </label>
               </div>
             </div>

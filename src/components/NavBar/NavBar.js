@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <Navbar fixed="top" className="nav not-selectable " expand="md">
       <Container fluid>
-        <div className="brand">
+        <div className="brand tester2">
           <NavLink className="brand" to={"/"}>
             <img
               className="rotate"
@@ -23,11 +23,7 @@ const NavBar = () => {
         </div>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="ms-auto me-auto my-2 my-md-0"
-            style={{ maxHeight: "247px" }}
-            navbarScroll
-          >
+          <Nav className="tester" style={{ maxHeight: "247px" }} navbarScroll>
             <ul className="links_list me-5P">
               <li>
                 <NavLink className="neon-button" to={"/"}>

@@ -238,3 +238,9 @@
 .neon-buttonDisabled:focus {
   color: rgba(255, 255, 255, 0.575);
 }
+.tester {
+  width: 100%;
+}
+.tester2 {
+  width: 40%;
+}

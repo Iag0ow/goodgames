@@ -29,8 +29,8 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to={"/popular"}>
-                  Popular
+                <NavLink className="nav-link" to={"/genres"}>
+                  Genres
                 </NavLink>
               </li>
 
@@ -79,7 +79,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to={"/list"}>
+                <NavLink className="nav-link" to={"/games"}>
                   List
                 </NavLink>
               </li>
