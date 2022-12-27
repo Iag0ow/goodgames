@@ -6,6 +6,9 @@ import { useState } from "react";
 import "./NavBar.css";
 const NavBar = () => {
   const [searchOtherPage, setSearchOtherPage] = useState("");
+  function handleSearch(e) {
+    e.key === "Enter" && document.getElementById("submitSearch").click();
+  }
   return (
     <Navbar fixed="top" className="nav not-selectable " expand="md">
       <Container fluid>
@@ -56,11 +59,13 @@ const NavBar = () => {
               className="text-dark form-control me-2"
               onChange={(e) => setSearchOtherPage(e.target.value)}
               value={searchOtherPage}
+              onKeyDown={handleSearch}
             />
             <NavLink
               to={`/games/q=${searchOtherPage}`}
               className="neon-button"
               type="submit"
+              id="submitSearch"
             >
               Search
             </NavLink>

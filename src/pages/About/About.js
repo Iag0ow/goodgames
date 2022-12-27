@@ -22,8 +22,8 @@ const About = () => {
             <Draggable>
               <div className="bg-light me-2 p-4 mt-5 cardAbout grabClick">
                 <h1>
-                  This is all about a personal project made by me Iago Macêdo,
-                  where my main objective was to test my own skills with React
+                  I used resources like UseState, UseEffect, Custom Hooks, React
+                  Router, responsive design and more...
                 </h1>
               </div>
             </Draggable>
@@ -39,8 +39,8 @@ const About = () => {
             <Draggable>
               <div className="bg-light me-2 p-4 mt-5 cardAbout grabClick">
                 <h1>
-                  This is all about a personal project made by me Iago Macêdo,
-                  where my main objective was to test my own skills with React
+                  These are some details about the project, soon I will bring
+                  more things and who knows more improvements
                 </h1>
               </div>
             </Draggable>
