@@ -31,7 +31,7 @@
     transform: rotate(360deg);
   }
 }
-.teste {
+.inputSearchGames {
   width: 65vw;
   background-color: #021a45;
   left: 0px;
@@ -49,14 +49,24 @@
   padding-left: 0px;
   font-size: 25px;
 }
-.teste:focus {
+.inputSearchGames:focus {
   transition: 0.8;
   border-bottom: 4px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
   font-size: 40px;
   padding-bottom: 8px;
 }
-.teste:focus::placeholder {
+.inputSearchGames:focus::placeholder {
   color: rgb(255, 255, 255);
   transition: 0.8;
+}
+
+@media (max-width: 575px) {
+  .inputSearchGames {
+    font-size: 15px;
+    height: 30px;
+  }
+  .inputSearchGames:focus {
+    font-size: 20px;
+  }
 }

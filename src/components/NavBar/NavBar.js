@@ -10,9 +10,9 @@ const NavBar = () => {
     e.key === "Enter" && document.getElementById("submitSearch").click();
   }
   return (
-    <Navbar fixed="top" className="nav not-selectable " expand="md">
+    <Navbar fixed="top" className="nav not-selectable" expand="md">
       <Container fluid>
-        <div className="brand tester2">
+        <div className="brand">
           <NavLink className="brand" to={"/"}>
             <img
               className="rotate"
@@ -26,7 +26,11 @@ const NavBar = () => {
         </div>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="tester" style={{ maxHeight: "247px" }} navbarScroll>
+          <Nav
+            className="searchNav"
+            style={{ maxHeight: "247px" }}
+            navbarScroll
+          >
             <ul className="links_list me-5P">
               <li>
                 <NavLink className="neon-button" to={"/"}>

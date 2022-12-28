@@ -58,7 +58,7 @@ const Games = () => {
                     name="search"
                     type="text"
                     placeholder="Search your game..."
-                    className="text-light teste"
+                    className="text-light inputSearchGames"
                     onChange={handleSearch}
                     value={search}
                   />

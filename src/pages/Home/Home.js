@@ -18,7 +18,7 @@ const Home = () => {
         <Carousel>
           <Carousel.Item>
             <img
-              className="d-block w-100 margin"
+              className="d-block w-100 tester margin"
               src={fortnite}
               alt="First slide"
             />
@@ -26,7 +26,7 @@ const Home = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100 margin"
+              className="d-block w-100 tester margin"
               src={godOfWar}
               alt="Second slide"
             />
@@ -34,19 +34,23 @@ const Home = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100 margin"
+              className="d-block w-100 tester margin"
               src={pokemonYello}
               alt="Third slide"
             />
             <Carousel.Caption></Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100 margin" src={gta} alt="Third slide" />
+            <img
+              className="d-block w-100 tester margin"
+              src={gta}
+              alt="Third slide"
+            />
             <Carousel.Caption></Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100 margin"
+              className="d-block w-100 tester margin"
               src={blackOps}
               alt="Four slide"
             />
@@ -72,7 +76,7 @@ const Home = () => {
               <div className="align-self-center">
                 <NavLink>
                   <Card className="front cardHover" style={{ height: "362px" }}>
-                    <Card.Img className="zoom" variant="top" />
+                    <Card.Img className="zoom img" variant="top" />
                     <Card.Body>
                       <Card.Title>Loading</Card.Title>
                       <Card.Text className="lh-sm">Loading</Card.Text>
@@ -94,7 +98,7 @@ const Home = () => {
                           style={{ height: "362px" }}
                         >
                           <Card.Img
-                            className="zoom"
+                            className="zoom img"
                             variant="top"
                             src={game.thumbnail}
                           />
