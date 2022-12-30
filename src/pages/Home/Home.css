@@ -50,6 +50,10 @@
 .cardHoved:hover {
   transform: scale(1.1);
 }
+.border-b {
+  border-bottom: 1px solid white;
+}
+
 /* sm */
 @media (max-width: 575px) {
   .tester {
@@ -61,6 +65,30 @@
   .img {
     width: 100%;
     height: 50%;
+  }
+  .m-mo {
+    margin-left: 0.5em;
+    line-height: -5px;
+  }
+
+  .b-mo {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    margin-bottom: 10px;
+  }
+
+  .cardHover {
+    background-color: #021a45 !important;
+    color: #0ff;
+    border: 2px solid #fff !important;
+    border-radius: 10px;
+    transition: 0.1s;
+    overflow: hidden;
+  }
+  .cardHover:hover {
+    box-shadow: none;
+    transform: scale(1);
+    transition: none;
   }
 }
 /* sm */

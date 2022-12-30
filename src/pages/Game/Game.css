@@ -87,3 +87,17 @@
     transform: translateY(-150px);
   }
 }
+
+@media (max-width: 575px) {
+  .links_list-mo {
+    display: flex;
+    flex-direction: row;
+    font-size: smaller;
+    padding: 25px;
+  }
+  .links_list-mo li {
+    margin: 5px;
+  }
+  .links_list-mo a {
+  }
+}

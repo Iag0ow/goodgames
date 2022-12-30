@@ -21,7 +21,7 @@ const Game = () => {
             <h1 className="display-5 fw-bold ">{game && game.title}</h1>
             <p className="ms-1">Released: {game && game.release_date}</p>
             <div className="col-md-8 mt-4 border height d-flex flex-column ">
-              <ul className="links_list ms-4 align-self-center not-selectable">
+              <ul className="links_list links_list-mo ms-4 align-self-center not-selectable">
                 <li>
                   <NavLink
                     className="neon-button ms-2"

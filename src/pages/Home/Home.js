@@ -59,14 +59,12 @@ const Home = () => {
         </Carousel>
       </section>
       <section className="container back mb-5 ">
-        <hr />
         <div className="row ">
-          <div className="col-md-12 d-flex p-0 border-top">
-            <div className="align-self-center">
-              <h1 className="display-6 border-bottom lh-base mb-3">
+          <div className="col-md-12 d-flex p-0 border-top ">
+            <div className="align-self-center b-mo border-bottom mb-3">
+              <h1 className="display-6 lh-base mb-3 m-mo">
                 Find your favorite games in this site
               </h1>
-              <hr />
             </div>
           </div>
         </div>

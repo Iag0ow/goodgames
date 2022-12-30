@@ -52,7 +52,7 @@ const Games = () => {
         <section className="homeSpace">
           <div className="row align-items-md-stretch">
             <div className="col-md-12 lightNingSearch">
-              <div className="h-100  p-5 bg-transparent index not-selectable">
+              <div className="h-100 p-5 bg-transparent index not-selectable">
                 <label>
                   <input
                     name="search"
