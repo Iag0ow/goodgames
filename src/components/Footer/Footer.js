@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer className="pt-4">
       <div className="container">
-        <div className="row">
-          <div className="col-md-2 not-selectable">
+        <div className="row ">
+          <div className="col-md-2 footer-mo not-selectable">
             <span to={"/"} className="brand-name ">
               GooDGames
             </span>
@@ -20,7 +20,7 @@ const Footer = () => {
               alt="GooDGames"
             />
           </div>
-          <div className="col-md-2">
+          <div className="col-md-2 footer-mo">
             <h4>COMPANY</h4>
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -41,7 +41,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-2 footer-mo">
             <h4>COMUNITY</h4>
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -85,7 +85,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-4">
+
+          <div className="col-md-4 footer-moSocial">
             <ul>
               <li>
                 <a href="mailto:iagomacedo159@gmail.com">

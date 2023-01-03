@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import "../NavBar/NavBar.css";
 import { useFetch } from "../../hooks/useFetch";
 const Info = () => {
   const { id } = useParams();
@@ -6,9 +7,9 @@ const Info = () => {
   const { data: game } = useFetch(url);
   return (
     <div>
-      <div className="mt-5 mb-3 none">
+      <div className="mt-5 mb-3 none ">
         <h1 className="fs-2 mb-4 fw-bold">Info:</h1>
-        <ul className="none fs-5 listStyleNone">
+        <ul className="none fs-6 listStyleNone">
           <li>
             <span className="fw-bold"> Title: </span>
             {game && game.title}

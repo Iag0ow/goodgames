@@ -68,31 +68,39 @@ const Game = () => {
           </div>
           {console.log(game)}
           {game && game.screenshots.hasOwnProperty("0") === true ? (
-            <Carousel className="border m-5 ">
+            <Carousel className="mt-5 bord">
               <Carousel.Item>
                 <img
-                  className="d-block w-100 "
+                  className="d-block w-100 carousel-mo "
                   src={game && game.screenshots[0].image}
                   alt="First slide"
                 />
                 <Carousel.Caption></Carousel.Caption>
               </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={game && game.screenshots[1].image}
-                  alt="First slide"
-                />
-                <Carousel.Caption></Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={game && game.screenshots[2].image}
-                  alt="First slide"
-                />
-                <Carousel.Caption></Carousel.Caption>
-              </Carousel.Item>
+              {game && game.screenshots.hasOwnProperty("1") === true ? (
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 carousel-mo"
+                    src={game && game.screenshots[1].image}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+              ) : (
+                ""
+              )}
+              {game && game.screenshots.hasOwnProperty("2") === true ? (
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 carousel-mo"
+                    src={game && game.screenshots[2].image}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+              ) : (
+                ""
+              )}
             </Carousel>
           ) : (
             ""

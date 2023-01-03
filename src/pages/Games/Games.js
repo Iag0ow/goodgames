@@ -9,6 +9,8 @@ import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import "./Games.css";
 const Games = () => {
+  const widthScreen = window.screen.width;
+
   const { searchOtherPage } = useParams();
   const handlePageClick = (e) => {
     setCurrentPage(e.selected);
@@ -174,7 +176,7 @@ const Games = () => {
               <Spinner animation="border" variant="info" />
             </div>
           ) : (
-            <div>
+            <div className="div-mo">
               <ReactPaginate
                 breakLabel={"..."}
                 pageCount={search.length > 0 ? pagesFiltered : pages}
@@ -190,6 +192,8 @@ const Games = () => {
                 previousLinkClassName={"page-link"}
                 breakLinkClassName={"page-link"}
                 activeClassName={"active"}
+                marginPagesDisplayed={widthScreen <= 767 ? 1 : 2}
+                pageRangeDisplayed={widthScreen <= 767 ? 1 : 3}
               />
             </div>
           )}

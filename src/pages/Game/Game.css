@@ -79,14 +79,14 @@
   animation-iteration-count: infinite;
 }
 
-@keyframes laser {
+/* @keyframes laser {
   from {
     transform: translateY(0px);
   }
   to {
     transform: translateY(-150px);
   }
-}
+} */
 
 @media (max-width: 575px) {
   .links_list-mo {
@@ -100,4 +100,23 @@
   }
   .links_list-mo a {
   }
+}
+@media (max-width: 767px) {
+  .carousel-mo {
+    width: 900px;
+  }
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.04);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+.bord {
+  border: 1px solid white;
 }

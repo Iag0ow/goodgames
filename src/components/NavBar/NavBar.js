@@ -7,7 +7,13 @@ import "./NavBar.css";
 const NavBar = () => {
   const [searchOtherPage, setSearchOtherPage] = useState("");
   function handleSearch(e) {
-    e.key === "Enter" && document.getElementById("submitSearch").click();
+    if (e.key === "Enter") {
+      document.getElementById("submitSearch").click();
+      closeToggle();
+    }
+  }
+  function closeToggle() {
+    document.getElementById("toggleIdButton").click();
   }
   return (
     <Navbar fixed="top" className="nav not-selectable" expand="md">
@@ -24,37 +30,41 @@ const NavBar = () => {
             <span className="brand-name">GooDGames</span>
           </NavLink>
         </div>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Toggle
+          id="toggleIdButton"
+          aria-controls="navbarScroll"
+          className="button-mo"
+        />
+        <Navbar.Collapse id="navbarScroll" className="rounded-bottom ">
           <Nav
             className="searchNav"
             style={{ maxHeight: "247px" }}
             navbarScroll
           >
-            <ul className="links_list me-5P">
+            <ul className="links_list me-5P" onClick={closeToggle}>
               <li>
-                <NavLink className="neon-button" to={"/"}>
+                <NavLink id="Home" className="neon-button" to={"/"}>
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink className="neon-button" to={"/games"}>
+                <NavLink id="Games" className="neon-button" to={"/games"}>
                   Games
                 </NavLink>
               </li>
               <li>
-                <NavLink className="neon-button" to={"/genres"}>
+                <NavLink id="Genrers" className="neon-button" to={"/genres"}>
                   Genrers
                 </NavLink>
               </li>
               <li>
-                <NavLink className="neon-button" to={"/about"}>
+                <NavLink id="About" className="neon-button" to={"/about"}>
                   About
                 </NavLink>
               </li>
             </ul>
           </Nav>
-          <label className="d-flex">
+          <label className="d-flex margin-mo-search">
             <input
               name="search"
               type="text"

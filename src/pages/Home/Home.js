@@ -68,7 +68,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="row tips ">
+        <div className="row tips">
           {loading && (
             <div className="col-lg-3 col-sm-6 mt-5">
               <div className="align-self-center">

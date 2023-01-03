@@ -92,3 +92,9 @@
   }
 }
 /* sm */
+
+@media (max-width: 767px) {
+  .tips {
+    margin: 0.1px;
+  }
+}

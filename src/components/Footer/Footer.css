@@ -14,3 +14,11 @@ footer ul li {
 footer h4 {
   color: #787777;
 }
+@media (max-width: 767px) {
+  .footer-mo {
+    display: none;
+  }
+  .footer-moSocial {
+    margin-bottom: 10px;
+  }
+}
