@@ -178,7 +178,7 @@ const Games = () => {
               <Spinner animation="border" variant="info" />
             </div>
           ) : (
-            <div className="div-mo">
+            <div>
               <ReactPaginate
                 breakLabel={"..."}
                 pageCount={search.length > 0 ? pagesFiltered : pages}

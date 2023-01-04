@@ -69,6 +69,15 @@
   .inputSearchGames:focus {
     font-size: 20px;
   }
-  .div-mo {
+}
+
+@media (max-width: 767px) {
+  .lightNingSearch::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 1400px;
+    background: linear-gradient(#00ccff, #0ff);
+    animation: none;
   }
 }
