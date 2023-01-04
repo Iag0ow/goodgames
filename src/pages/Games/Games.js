@@ -12,7 +12,7 @@ const Games = () => {
   const widthScreen = window.screen.width;
   let totalPerPage = 16;
   if (widthScreen <= 761) {
-    totalPerPage = 4;
+    totalPerPage = 8;
   }
   const { searchOtherPage } = useParams();
   const handlePageClick = (e) => {
@@ -37,6 +37,7 @@ const Games = () => {
   }, [searchOtherPage]);
   const url = `https://free-to-play-games-database.p.rapidapi.com/api/games`;
   const { data, loading } = useFetch(url);
+  console.log(data);
   const pages = Math.ceil(data && data.length / totalPerPage);
   const startIndex = currentPage * totalPerPage;
   const endIndex = startIndex + totalPerPage;
@@ -91,30 +92,6 @@ const Games = () => {
           {data &&
             search.length > 0 &&
             currentFiltered.map((game, index) => (
-              <div key={index} className="col-lg-3 col-sm-6 mt-5 ">
-                <div className="align-self-center ">
-                  <NavLink to={`/game/${game.id}`}>
-                    <Card
-                      className="front cardHover"
-                      style={{ height: "362px" }}
-                    >
-                      <Card.Img
-                        className="zoom"
-                        variant="top"
-                        src={game.thumbnail}
-                      />
-                      <Card.Body className="lh-sm">
-                        <Card.Title>{game.title}</Card.Title>
-                        <Card.Text>{game.short_description}</Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </NavLink>
-                </div>
-              </div>
-            ))}
-          {data &&
-            search.length === 0 &&
-            currentItens.map((game, index) => (
               <div key={index} className="col-lg-3 col-sm-6 mt-5 ">
                 <div className="align-self-center ">
                   <NavLink to={`/game/${game.id}`}>
