@@ -254,7 +254,7 @@
     width: 350px;
   }
 }
-@media (min-width: 937px) and (max-width: 1091px) {
+@media (min-width: 937px) and (max-width: 1100px) {
   .links_list {
     width: 420px;
   }
