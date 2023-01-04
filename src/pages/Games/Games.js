@@ -10,7 +10,10 @@ import Card from "react-bootstrap/Card";
 import "./Games.css";
 const Games = () => {
   const widthScreen = window.screen.width;
-
+  let totalPerPage = 16;
+  if (widthScreen <= 761) {
+    totalPerPage = 4;
+  }
   const { searchOtherPage } = useParams();
   const handlePageClick = (e) => {
     setCurrentPage(e.selected);
@@ -32,12 +35,11 @@ const Games = () => {
       document.getElementById("navSearch").value = "";
     }
   }, [searchOtherPage]);
-
   const url = `https://free-to-play-games-database.p.rapidapi.com/api/games`;
   const { data, loading } = useFetch(url);
-  const pages = Math.ceil(data && data.length / 16);
-  const startIndex = currentPage * 16;
-  const endIndex = startIndex + 16;
+  const pages = Math.ceil(data && data.length / totalPerPage);
+  const startIndex = currentPage * totalPerPage;
+  const endIndex = startIndex + totalPerPage;
   const currentItens = data && data.slice(startIndex, endIndex);
   const lowerSearch = search.toLowerCase();
 
@@ -46,7 +48,7 @@ const Games = () => {
       ? data &&
         data.filter((find) => find.title.toLowerCase().includes(lowerSearch))
       : currentItens;
-  const pagesFiltered = Math.ceil(data && filtered.length / 16);
+  const pagesFiltered = Math.ceil(data && filtered.length / totalPerPage);
   const currentFiltered = data && filtered.slice(startIndex, endIndex);
   return (
     <div>

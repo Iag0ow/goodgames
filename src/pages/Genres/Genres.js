@@ -60,9 +60,14 @@ const Genres = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
   const { data, loading } = useFetch(url);
-  const pages = Math.ceil(data && data.length / 16);
-  const startIndex = currentPage * 16;
-  const endIndex = startIndex + 16;
+  let totalPerPage = 16;
+  const widthScreen = window.screen.width;
+  if (widthScreen <= 767) {
+    totalPerPage = 8;
+  }
+  const pages = Math.ceil(data && data.length / totalPerPage);
+  const startIndex = currentPage * totalPerPage;
+  const endIndex = startIndex + totalPerPage;
   const currentItens = data && data.slice(startIndex, endIndex);
   const handlePageClick = (e) => {
     setCurrentPage(e.selected);
@@ -182,6 +187,8 @@ const Genres = () => {
                 previousLinkClassName={"page-link"}
                 breakLinkClassName={"page-link"}
                 activeClassName={"active"}
+                marginPagesDisplayed={widthScreen <= 767 ? 1 : 2}
+                pageRangeDisplayed={widthScreen <= 767 ? 1 : 3}
               />
             </div>
           )}

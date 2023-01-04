@@ -35,12 +35,7 @@ const Game = () => {
                     game.hasOwnProperty("minimum_system_requirements") !==
                       true) ||
                   (game && game.minimum_system_requirements.os === null) ? (
-                    <NavLink
-                      className="neon-buttonDisabled noPointer"
-                      disabled={true}
-                    >
-                      Requeriments
-                    </NavLink>
+                    ""
                   ) : (
                     <NavLink
                       className="neon-button"
@@ -59,14 +54,13 @@ const Game = () => {
                   </NavLink>
                 </li>
               </ul>
-              <div className="col-md-7  align-self-center">
+              <div className="col-md-7 align-self-center ms-3 ">
                 {information === "Description" && <Description />}
                 {information === "Requeriments" && <Requeriments />}
                 {information === "Info" && <Info />}
               </div>
             </div>
           </div>
-          {console.log(game)}
           {game && game.screenshots.hasOwnProperty("0") === true ? (
             <Carousel className="mt-5 bord">
               <Carousel.Item>

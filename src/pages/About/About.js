@@ -9,10 +9,11 @@ const About = () => {
             About this <span style={{ color: "#0ff" }}>Project</span>
           </h1>
         </div>
+
         <div className="align-self-center row">
           <div className="col-md-6">
             <Draggable>
-              <div className="bg-light me-2 p-4 mt-5 cardAbout grabClick">
+              <div className="bg-light me-2 p-2 mt-5 cardAbout grabClick">
                 <h1>
                   This is all about a personal project made by me Iago Macêdo,
                   where my main objective was to test my own skills with React
@@ -20,10 +21,10 @@ const About = () => {
               </div>
             </Draggable>
             <Draggable>
-              <div className="bg-light me-2 p-4 mt-5 cardAbout grabClick">
+              <div className="bg-light me-2 p-2 mt-5 cardAbout grabClick">
                 <h1>
                   I used resources like UseState, UseEffect, Custom Hooks, React
-                  Router, responsive design and more...
+                  Router,BootStrap, responsive design and more...
                 </h1>
               </div>
             </Draggable>
@@ -31,13 +32,13 @@ const About = () => {
 
           <div className="col-md-6 ">
             <Draggable>
-              <div className="bg-light me-2 p-4 mt-5 cardAbout grabClick">
+              <div className="bg-light me-2 p-2 mt-5 cardAbout grabClick">
                 <h1>The project was based on the consumption of a games api</h1>
               </div>
             </Draggable>
 
             <Draggable>
-              <div className="bg-light me-2 p-4 mt-5 cardAbout grabClick">
+              <div className="bg-light me-2 p-2 mt-5 cardAbout grabClick">
                 <h1>
                   These are some details about the project, soon I will bring
                   more things and who knows more improvements

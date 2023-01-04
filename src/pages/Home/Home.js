@@ -12,6 +12,12 @@ const url =
   "https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity";
 const Home = () => {
   const { data, loading } = useFetch(url);
+  let totalPerPage = 16;
+  const widthScreen = window.screen.width;
+  if (widthScreen <= 767) {
+    totalPerPage = 8;
+  }
+
   return (
     <>
       <section className="container-fluid homeSpace">
@@ -87,7 +93,7 @@ const Home = () => {
           {data &&
             data.map(
               (game, index) =>
-                index < 16 && (
+                index < totalPerPage && (
                   <div key={game.id} className="col-lg-3 col-sm-6 mt-5">
                     <div className="align-self-center">
                       <NavLink to={`/game/${game.id}`}>

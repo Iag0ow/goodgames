@@ -5,15 +5,17 @@ import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
 import "./NavBar.css";
 const NavBar = () => {
+  const widthScreen = window.screen.width;
   const [searchOtherPage, setSearchOtherPage] = useState("");
   function handleSearch(e) {
     if (e.key === "Enter") {
       document.getElementById("submitSearch").click();
-      closeToggle();
     }
   }
   function closeToggle() {
-    document.getElementById("toggleIdButton").click();
+    if (widthScreen <= 767) {
+      document.getElementById("toggleIdButton").click();
+    }
   }
   return (
     <Navbar fixed="top" className="nav not-selectable" expand="md">
@@ -80,6 +82,7 @@ const NavBar = () => {
               className="neon-button"
               type="submit"
               id="submitSearch"
+              onClick={closeToggle}
             >
               Search
             </NavLink>

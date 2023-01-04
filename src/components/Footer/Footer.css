@@ -1,8 +1,8 @@
 footer {
-  width: 100%;
   background-color: #010816;
   color: white;
   border-top: 3px solid #021a45;
+  margin-top: 10%;
 }
 footer ul li {
   display: flex;
