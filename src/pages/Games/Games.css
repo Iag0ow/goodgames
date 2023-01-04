@@ -33,6 +33,7 @@
 }
 .inputSearchGames {
   width: 65vw;
+  max-width: 1200px;
   background-color: #021a45;
   left: 0px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
@@ -75,7 +76,7 @@
   .lightNingSearch::before {
     content: "";
     position: absolute;
-    width: 400px;
+    width: 600px;
     height: 1400px;
     background: linear-gradient(#00ccff, #0ff);
     animation: none;

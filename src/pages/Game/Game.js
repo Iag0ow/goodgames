@@ -67,7 +67,7 @@ const Game = () => {
                 <img
                   className="d-block w-100 carousel-mo "
                   src={game && game.screenshots[0].image}
-                  alt="First slide"
+                  alt="First img not found"
                 />
                 <Carousel.Caption></Carousel.Caption>
               </Carousel.Item>
@@ -76,7 +76,7 @@ const Game = () => {
                   <img
                     className="d-block w-100 carousel-mo"
                     src={game && game.screenshots[1].image}
-                    alt="First slide"
+                    alt="Second img not found"
                   />
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>
@@ -88,7 +88,7 @@ const Game = () => {
                   <img
                     className="d-block w-100 carousel-mo"
                     src={game && game.screenshots[2].image}
-                    alt="First slide"
+                    alt="Third img not found"
                   />
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>

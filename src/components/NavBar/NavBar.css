@@ -254,3 +254,38 @@
     width: 350px;
   }
 }
+@media (min-width: 937px) and (max-width: 1091px) {
+  .links_list {
+    width: 420px;
+  }
+  .me-5P {
+    margin-right: 7em !important;
+  }
+
+  .searchNav {
+    width: none;
+  }
+  #navbarScroll {
+    width: 1500px;
+  }
+}
+@media (min-width: 768px) and (max-width: 936px) {
+  .links_list {
+    width: 410px;
+    margin-left: 35px;
+  }
+  .me-5P {
+    margin-right: 0.1em !important;
+  }
+
+  .searchNav {
+    width: 395px;
+  }
+  #navbarScroll {
+    width: 950px;
+  }
+  .links_list li a {
+    padding: 0.4em 0.6em;
+    margin-right: 5px;
+  }
+}

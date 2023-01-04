@@ -9,7 +9,10 @@ const Footer = () => {
     <footer className="pt-4">
       <div className="container">
         <div className="row ">
-          <div className="col-md-2 footer-mo not-selectable">
+          <div
+            id="footer-brand-id"
+            className="col-md-2 footer-mo not-selectable"
+          >
             <span to={"/"} className="brand-name ">
               GooDGames
             </span>
