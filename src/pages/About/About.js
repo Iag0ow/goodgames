@@ -49,7 +49,7 @@ const About = () => {
         </div>
         <div className="align-self-center mt-2">
           <h1 className="display-4 fw-bold text-light ">
-            <span style={{ color: "#0ff" }}>Grab </span>Notations
+            <span style={{ color: "#0ff" }}>Try dragging</span> the notes
           </h1>
         </div>
       </div>
