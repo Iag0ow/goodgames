@@ -6,7 +6,7 @@ import { useState } from "react";
 import "./NavBar.css";
 const NavBar = () => {
   const widthScreen = window.screen.width;
-  const [searchOtherPage, setSearchOtherPage] = useState(null);
+  const [searchOtherPage, setSearchOtherPage] = useState("");
   function handleSearch(e) {
     if (e.key === "Enter") {
       document.getElementById("submitSearch").click();

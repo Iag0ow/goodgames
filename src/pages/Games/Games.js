@@ -37,7 +37,6 @@ const Games = () => {
   }, [searchOtherPage]);
   const url = `https://free-to-play-games-database.p.rapidapi.com/api/games`;
   const { data, loading } = useFetch(url);
-  console.log(data);
   const pages = Math.ceil(data && data.length / totalPerPage);
   const startIndex = currentPage * totalPerPage;
   const endIndex = startIndex + totalPerPage;
