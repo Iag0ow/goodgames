@@ -6,7 +6,7 @@ import { useState } from "react";
 import "./NavBar.css";
 const NavBar = () => {
   const widthScreen = window.screen.width;
-  const [searchOtherPage, setSearchOtherPage] = useState("");
+  const [searchOtherPage, setSearchOtherPage] = useState(null);
   function handleSearch(e) {
     if (e.key === "Enter") {
       document.getElementById("submitSearch").click();
@@ -16,6 +16,7 @@ const NavBar = () => {
     if (widthScreen <= 767) {
       document.getElementById("toggleIdButton").click();
     }
+    setSearchOtherPage("");
   }
   return (
     <Navbar fixed="top" className="nav not-selectable" expand="md">
@@ -78,7 +79,7 @@ const NavBar = () => {
               onKeyDown={handleSearch}
             />
             <NavLink
-              to={`/games/q=${searchOtherPage}`}
+              to={searchOtherPage ? `/games/q=${searchOtherPage}` : "/games"}
               className="neon-button"
               type="submit"
               id="submitSearch"
