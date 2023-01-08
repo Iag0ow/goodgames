@@ -9,8 +9,7 @@ export const useFetch = (url) => {
       const options = {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "ac8350c700mshde1f49ad1e8e56dp141154jsnb539112b111f",
+          "X-RapidAPI-Key": "Your api key",
           "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
         },
       };
