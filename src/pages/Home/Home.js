@@ -1,4 +1,3 @@
-import { useFetch } from "../../hooks/useFetch";
 import blackOps from "../../imgs/blackOps.jpg";
 import pokemonYello from "../../imgs/1920x1200_Pokemon_Yellow_desktop_mpqlkWX.5fbbf19b.6865d68e.jpg";
 import gta from "../../imgs/gta.jpg";
@@ -8,10 +7,9 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
-const url =
-  "https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity";
+import { GetByPopularity } from "../../hooks/useData";
 const Home = () => {
-  const { data, loading } = useFetch(url);
+  const { data, loading } = GetByPopularity();
   let totalPerPage = 16;
   const widthScreen = window.screen.width;
   if (widthScreen <= 767) {

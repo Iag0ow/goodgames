@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useFetch = (url) => {
+  const api = "https://free-to-play-games-database.p.rapidapi.com/api";
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -14,7 +15,7 @@ export const useFetch = (url) => {
           "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
         },
       };
-      const res = await fetch(url, options);
+      const res = await fetch(`${api}${url}`, options);
       const data = await res.json();
       setData(data);
       setLoading(false);

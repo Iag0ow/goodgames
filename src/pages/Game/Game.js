@@ -1,6 +1,5 @@
 import "./Game.css";
 import { useParams } from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
 import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/esm/Container";
 import { NavLink } from "react-router-dom";
@@ -8,11 +7,11 @@ import { useState } from "react";
 import Description from "../../components/Information/Description";
 import Requeriments from "../../components/Information/Requeriments";
 import Info from "../../components/Information/Info";
+import { GetById } from "../../hooks/useData";
 const Game = () => {
   const [information, setInformation] = useState("Description");
   const { id } = useParams();
-  const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
-  const { data: game } = useFetch(url);
+  const { data: game } = GetById(id);
   return (
     <div>
       <div className="home start text-white backGroundGameColor">

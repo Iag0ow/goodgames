@@ -1,4 +1,3 @@
-import { useFetch } from "../../hooks/useFetch";
 import { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +7,7 @@ import ReactPaginate from "react-paginate";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import "./Games.css";
+import { GetAll } from "../../hooks/useData";
 const Games = () => {
   const widthScreen = window.screen.width;
   let totalPerPage = 16;
@@ -35,8 +35,7 @@ const Games = () => {
       document.getElementById("navSearch").value = "";
     }
   }, [searchOtherPage]);
-  const url = `https://free-to-play-games-database.p.rapidapi.com/api/games`;
-  const { data, loading } = useFetch(url);
+  const { data, loading } = GetAll();
   const pages = Math.ceil(data && data.length / totalPerPage);
   const startIndex = currentPage * totalPerPage;
   const endIndex = startIndex + totalPerPage;

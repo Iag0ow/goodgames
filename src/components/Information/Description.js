@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
 import ShowMoreText from "react-show-more-text";
+import { GetById } from "../../hooks/useData";
 const Description = () => {
   const { id } = useParams();
-  const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
-  const { data: game, loading } = useFetch(url);
+  const { data: game, loading } = GetById(id);
   return (
     <>
       {loading && (

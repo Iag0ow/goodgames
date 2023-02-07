@@ -1,4 +1,3 @@
-import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +7,7 @@ import ReactPaginate from "react-paginate";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import "./Genres.css";
+import { GetByGenre } from "../../hooks/useData";
 const Genres = () => {
   const genrers = [
     "mmorpg",
@@ -58,8 +58,7 @@ const Genres = () => {
   ];
   const [category, setCategory] = useState("moba");
   const [currentPage, setCurrentPage] = useState(0);
-  const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
-  const { data, loading } = useFetch(url);
+  const { data, loading } = GetByGenre(category);
   let totalPerPage = 16;
   const widthScreen = window.screen.width;
   if (widthScreen <= 767) {
